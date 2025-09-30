@@ -2,7 +2,7 @@ import Header from "@/components/layout/Header";
 import PostCard from "@/components/common/PostCard";
 import { PostProps } from "@/interfaces";
 import React from "react";
-import { title } from "process";
+
 
 const Posts: React.FC<PostProps[]> = ({ posts }) => {
     console.log(posts)
