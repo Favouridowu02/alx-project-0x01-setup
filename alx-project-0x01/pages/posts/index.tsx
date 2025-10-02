@@ -4,7 +4,7 @@ import { PostProps } from "@/interfaces";
 import React from "react";
 
 
-const Posts: React.FC<PostProps[]> = ({ posts }) => {
+const Posts: React.FC<{posts: PostProps[]}> = ( {posts} ) => {
     console.log(posts)
     return (
         <div className="flex flex-col h-screen">
@@ -34,7 +34,7 @@ const Posts: React.FC<PostProps[]> = ({ posts }) => {
 
 export async function getStaticProps() {
     const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-    const posts = await response.json()
+    const posts = await await response.json()
 
     return {
         props: {
